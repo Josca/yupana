@@ -4,4 +4,4 @@ set - x
 cd test
 
 . .env
-pipenv run python consumer.py
+python consumer.py

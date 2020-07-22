@@ -1,10 +1,10 @@
 #!/bin/bash
 set -x
 
-cp -f config/.host_env ../../insights-host-inventory/.env
-cd ../../insights-host-inventory/
+cp -f scripts/config/.host_env ../insights-host-inventory/.env
+cd ../insights-host-inventory/
 . .env
 
-pipenv install --dev
+#pipenv --python ~/anaconda3.6/bin/python install --dev
 pipenv run python manage.py db upgrade
 pipenv run python run_gunicorn.py
